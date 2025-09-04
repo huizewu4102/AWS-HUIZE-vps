@@ -5,11 +5,11 @@ allow-lan: true
 mode: Rule
 log-level: info
 proxies:
-  - name: "Xray"
+  - name: "Xray-SG"
     type: vmess
-    server: 3.22.235.5
+    server: 13.125.237.94
     port: 10086
-    uuid: 0b403500-2b5e-44e6-9005-d947e0944ab2
+    uuid: 0d7e30e3-08b0-4c4d-ac77-b1440971c6ad
     alterId: 0
     cipher: auto
     network: tcp
@@ -17,6 +17,7 @@ proxy-groups:
   - name: "Auto"
     type: select
     proxies:
-      - "Xray"
+      - "Xray-SG"
 rules:
   - MATCH,Auto
+
