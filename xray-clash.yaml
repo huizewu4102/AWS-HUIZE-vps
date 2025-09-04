@@ -1,1 +1,24 @@
-# Clash 配置文件示例 port: 7890 socks-port: 7891 allow-lan: true mode: Rule log-level: info  proxies:   - name: "Xray"     type: vmess     server: 3.22.235.5     port: 10086     uuid: 0b403500-2b5e-44e6-9005-d947e0944ab2     alterId: 0     cipher: auto     network: tcp  proxy-groups:   - name: "Auto"     type: select     proxies:       - "Xray"  rules:   - MATCH,Auto
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+
+proxies:
+  - name: "Xray"
+    type: vmess
+    server: 3.22.235.5
+    port: 10086
+    uuid: 0b403500-2b5e-44e6-9005-d947e0944ab2
+    alterId: 0
+    cipher: auto
+    network: tcp
+
+proxy-groups:
+  - name: "Auto"
+    type: select
+    proxies:
+      - "Xray"
+
+rules:
+  - MATCH,Auto
