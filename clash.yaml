@@ -1,0 +1,25 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+proxies:
+  - name: "Xray-Reality"
+    type: vless
+    server: 13.125.237.94
+    port: 443
+    uuid: 0d7e30e3-08b0-4c4d-ac77-b1440971c6ad
+    udp: true
+    tls: true
+    network: tcp
+    reality-opts:
+      public-key: -Dhg-_TL8Jl78pmu16ImUOP6o2SmeetQzB-nyyz34hU
+      short-id: ""
+    servername: www.microsoft.com
+proxy-groups:
+  - name: "Auto"
+    type: select
+    proxies:
+      - "Xray-Reality"
+rules:
+  - MATCH,Auto
